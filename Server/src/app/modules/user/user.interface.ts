@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Model } from 'mongoose';
 
-export type IRole = 'customer' | 'bookShopOwner' | 'admin';
+export type IRole = 'student' | 'admin';
 
 export type IUser = {
   role: IRole;

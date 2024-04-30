@@ -8,11 +8,7 @@ const router = express.Router();
 // my profile get
 router.get(
   '/my-profile',
-  auth(
-    ENUM_USER_ROLE.ADMIN,
-    ENUM_USER_ROLE.BOOK_SHOP_OWNER,
-    ENUM_USER_ROLE.CUSTOMER
-  ),
+  auth(ENUM_USER_ROLE.ADMIN, ENUM_USER_ROLE.STUDENT),
   UserController.getMyProfile
 );
 

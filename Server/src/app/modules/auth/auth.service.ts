@@ -12,7 +12,7 @@ import { Secret } from 'jsonwebtoken';
 import { IUser } from '../user/user.interface';
 import mongoose from 'mongoose';
 
-// create a user through sign in
+//! create a user through sign in
 const createUser = async (user: IUser): Promise<IUser | null> => {
   let newUserAllData = null;
 
@@ -48,6 +48,7 @@ const createUser = async (user: IUser): Promise<IUser | null> => {
   return newUserAllData;
 };
 
+//! login User
 const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   const { email, password } = payload;
 
@@ -94,6 +95,7 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   return { accessToken, refreshToken };
 };
 
+//! Refresh Token
 const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
   let verifiedToken = null;
 
